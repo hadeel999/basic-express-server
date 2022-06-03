@@ -21,7 +21,7 @@ app.get('/person',validator,(req,res)=>{
 app.use('*', notFound);
 app.use(errorHandler);
 
-
+    
 function start(port) {
     app.listen(port, () => {
         console.log(`i'm listening on port${port}`);
