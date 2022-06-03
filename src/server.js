@@ -13,13 +13,13 @@ app.get('/',(req,res)=>{
 })
 
 app.get('/person',validator,(req,res)=>{
-    res.status(200).json({
-        name:req.name
-    })
+        res.status(200).json({
+            name:req.name
+        })
 })
 
-app.use('*', notFound);
 app.use(errorHandler);
+app.use('*', notFound);
 
 function start(port) {
     app.listen(port, () => {
